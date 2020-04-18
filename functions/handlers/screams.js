@@ -9,10 +9,11 @@ exports.getAllScreams = (req, res) => {
       data.forEach((doc) => {
         // include id
         screams.push({
-          screamID: doc.id,
+          //screamID: doc.id,
           body: doc.data().body,
           userHandel: doc.data.userHandel,
           createdAt: doc.data().createdAt,
+          //imageUrl: doc.data().imageUrl,
         });
       });
       return res.json(screams);
@@ -27,6 +28,7 @@ exports.postOneScream = (req, res) => {
   const newScream = {
     body: req.body.body,
     userHandel: req.user.handel,
+    //newF: req.body.newF,
     createdAt: new Date().toISOString(),
   };
   db.collection("screams")

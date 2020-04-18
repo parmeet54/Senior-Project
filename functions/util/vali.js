@@ -66,3 +66,25 @@ exports.valiLogin = (data) => {
     valid: Object.keys(errors).length === 0 ? true : false,
   };
 };
+
+exports.valiUserInfo = (data) => {
+  let userInfomation = {};
+
+  if (!isEmpty(data.location.trim())) {
+    userInfomation.location = data.location;
+  }
+  if (!isEmpty(data.bio.trim())) {
+    userInfomation.bio = data.bio;
+  }
+  if (!isEmpty(data.priceLow.trim())) {
+    userInfomation.priceLow = data.priceLow;
+  }
+  if (!isEmpty(data.priceHigh.trim())) {
+    userInfomation.priceHigh = data.priceHigh;
+  }
+  if (!isEmpty(data.range.trim())) {
+    userInfomation.range = data.range;
+  }
+
+  return userInfomation;
+};

@@ -13,3 +13,20 @@ taosheng14-patch-1:
     1.2 a default image will be setted right after a new user signed up(tested)
 2.edit user profile
   users can edit or add "bio", "location", "price-low","price-high", and "range" to their profile.(tested)
+
+
+taosheng14-patch-2:
+
+add a new comment to a post
+fetching a post along with the comments
+user1 can match to the post(user2)
+user1 can unmatch to the post(user2)
+delete a post by the user who posted it
+edit user profile(all fileds need to add can not be null, but can be empty)
+
+taosheng14-patch-3:
+notification when new messages and new matches.
+remove notification after reading
+get other user info without login
+
+

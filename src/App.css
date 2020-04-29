@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  background: rgb(221, 219, 219);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  margin: 80px auto 0 auto;
+  max-width: 1200px;
+}
+
+.nav-container {
+  margin-left: auto;
+}

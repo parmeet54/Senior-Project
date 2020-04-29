@@ -31,8 +31,10 @@ get other user info without login
 
 
 @parmeet54-frontend-1:
-Basic frontend structure setup
-3 blank pages: home, login, signup
-default materialUI navbar added, later to change
+Basic frontend structure setup.
 
-npm install @material-ui/core
+3 blank pages: home, login, signup.
+
+default materialUI navbar added, later to change.
+
+DO: npm install @material-ui/core

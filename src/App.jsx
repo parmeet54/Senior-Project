@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./Pages/home";
 import login from "./Pages/login";
 import signup from "./Pages/signup";
+import profile from "./Pages/profile";
 import Navbar from "./Components/Navbar";
 import "./App.css";
 
@@ -17,6 +18,7 @@ class App extends Component {
               <Route exact path="/" component={home} />
               <Route exact path="/login" component={login} />
               <Route exact path="/signup" component={signup} />
+              <Route exact path="/profile" component={profile} />
             </Switch>
           </div>
         </Router>

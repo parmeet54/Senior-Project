@@ -38,3 +38,5 @@ Basic frontend structure setup.
 default materialUI navbar added, later to change.
 
 DO: npm install @material-ui/core
+
+4/30: added login and sign up forms

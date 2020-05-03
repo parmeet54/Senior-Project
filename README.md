@@ -40,3 +40,8 @@ default materialUI navbar added, later to change.
 DO: npm install @material-ui/core
 
 4/30: added login and sign up forms
+
+@derian frontend
+May2:created cards component that hold info about other users,
+homepage has been updated as well to display the cards.
+Curently have not merged to master branch,all my work is under my branch

@@ -42,5 +42,5 @@ DO: npm install @material-ui/core
 4/30: added login and sign up forms
 
 @derian frontend
-May2:created cards component that hold info about other users
-homepage has been updated to display the cards
+May2:created cards component that hold info about other users,
+homepage has been updated as well to display the cards

@@ -63,9 +63,9 @@ class signup extends Component {
         confirmPassword: this.state.confirmpw,
         handel: this.state.handle,
       })
-      .then(() => {
+      .then((res) => {
         //console.log(result.data);
-        localStorage.setItem("FBIdtoken", "Bearer ${res.data,token}");
+        localStorage.setItem("LoginToken", `Bearer ${res.data}`);
         this.props.history.push("/");
       })
 

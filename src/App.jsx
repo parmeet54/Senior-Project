@@ -9,15 +9,16 @@ import Navbar from "./Components/Navbar";
 import jwtDecode from "jwt-decode";
 
 import axios from "axios";
-
-axios.default.baseURL =
-  "https://us-central1-roommate-5923e.cloudfunctions.net/api";
+import NewPost from "./Components/NewPost";
 
 let authenticated;
-const token = localStorage.FBIdtoken;
+const token = localStorage.LoginToken;
+let userID = "";
 
 if (token) {
   const decodedToken = jwtDecode(token);
+  console.log(decodedToken.user_id);
+  userID = decodedToken.user_id;
   if (decodedToken.exp * 1000 < Date.now()) {
     window.location.href = "/login";
     authenticated = false;

@@ -38,6 +38,5 @@
       "last 1 safari version"
     ]
   },
-
   "proxy": "https://us-central1-roommate-5923e.cloudfunctions.net/api"
 }

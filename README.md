@@ -30,3 +30,13 @@ remove notification after reading
 get other user info without login
 
 
+@parmeet54-frontend-1:
+Basic frontend structure setup.
+
+3 blank pages: home, login, signup.
+
+default materialUI navbar added, later to change.
+
+DO: npm install @material-ui/core
+
+4/30: added login and sign up forms

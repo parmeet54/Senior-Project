@@ -58,9 +58,9 @@ class login extends Component {
         email: this.state.email,
         password: this.state.password,
       })
-      .then(() => {
-        //console.log(result.data);
-        localStorage.setItem("FBIdtoken", "Bearer ${res.data,token}");
+      .then((result) => {
+        console.log(result.data);
+        localStorage.setItem("FBIdToken", `Bearer ${result.data}`);
         this.props.history.push("/");
       })
 

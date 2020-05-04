@@ -14,3 +14,7 @@
 .nav-container {
   margin-left: auto;
 }
+
+a {
+  text-decoration: none;
+}

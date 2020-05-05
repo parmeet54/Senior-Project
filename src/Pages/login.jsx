@@ -58,9 +58,10 @@ class login extends Component {
         email: this.state.email,
         password: this.state.password,
       })
-      .then(() => {
+      .then((res) => {
         //console.log(result.data);
-        localStorage.setItem("FBIdtoken", "Bearer ${res.data,token}");
+        localStorage.setItem("LoginToken", `Bearer ${res.data}`);
+        axios.defaults.headers.common["Authorization"] = `Bearer ${res.data}`;
         this.props.history.push("/");
       })
 

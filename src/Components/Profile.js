@@ -38,7 +38,7 @@ class Profile extends Component{
                 className={classes.image}/>
                 <CardContent className={classes.content}>
                     <Typorgraphy variant="h5" component={Link}
-                     to={'/users/${userName}'}
+                     to={`/user/${userName}`}
                     color="#3f51b5">
                         {userName}
                     </Typorgraphy>

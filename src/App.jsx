@@ -5,6 +5,7 @@ import home from "./Pages/home";
 import login from "./Pages/login";
 import signup from "./Pages/signup";
 import profile from "./Pages/profile";
+import user from './Pages/user';
 import Navbar from "./Components/Navbar";
 import jwtDecode from "jwt-decode";
 
@@ -38,6 +39,7 @@ class App extends Component {
               <Route exact path="/login" component={login} />
               <Route exact path="/signup" component={signup} />
               <Route exact path="/profile" component={profile} />
+              <Route exact path="/user/:handel"component={user} />
             </Switch>
           </div>
         </Router>

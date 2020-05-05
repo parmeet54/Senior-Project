@@ -45,3 +45,5 @@ DO: npm install @material-ui/core
 May2:created cards component that hold info about other users,
 homepage has been updated as well to display the cards.
 Curently have not merged to master branch,all my work is under my branch
+
+5/5: Page containing info about another user fetches info and displays it

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
-
 import Profile from '../Components/Profile';
 
 class home extends Component {
@@ -21,15 +20,15 @@ class home extends Component {
         .catch(err => console.log(err));
   }
     render() {
-        let recentProfileMarkup = this.state.profiles ? (
+        let ProfileMarkup = this.state.profiles ? (
             //fetch the profiles information
             this.state.profiles.map((profile) => <Profile profile={profile}/> )
         ) : <p>Loading ...</p>
         return (
-            //render the profiles as a grid         
+            //render the profiles as a grid
             <Grid container spacing={12}>
             <Grid item sm={12} xs={12}>
-                {recentProfileMarkup}
+                {ProfileMarkup}
             </Grid>
       </Grid>
         );

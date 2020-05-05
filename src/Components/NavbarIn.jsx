@@ -7,6 +7,7 @@ import { Typography } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import IconButton from "@material-ui/core/IconButton";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 
 class NavbarIn extends Component {
   render() {
@@ -18,10 +19,13 @@ class NavbarIn extends Component {
             <Button color="inherit" component={Link} to="/">
               Home
             </Button>
-            <IconButton color="inherit" component={Link} to={"/profile"}>
+            <IconButton color="inherit">
+              <NotificationsIcon />
+            </IconButton>
+            <IconButton color="inherit">
               <AccountCircle />
             </IconButton>
-            <IconButton color="inherit" component={Link} to={"/login"}>
+            <IconButton color="inherit">
               <ExitToAppIcon />
             </IconButton>
           </Toolbar>

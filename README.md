@@ -45,6 +45,3 @@ DO: npm install @material-ui/core
 May2:created cards component that hold info about other users,
 homepage has been updated as well to display the cards.
 Curently have not merged to master branch,all my work is under my branch
-
-@taosheng frontend
-may2: add new posts to homepage, need flash the page to display, login required

@@ -43,8 +43,6 @@ class signup extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: "",
-      lastName: "",
       email: "",
       password: "",
       confirmpw: "",
@@ -63,10 +61,13 @@ class signup extends Component {
         confirmPassword: this.state.confirmpw,
         handel: this.state.handle,
       })
-      .then(() => {
+      .then((res) => {
         //console.log(result.data);
-        localStorage.setItem("FBIdtoken", "Bearer ${res.data,token}");
-        this.props.history.push("/");
+        localStorage.setItem("LoginToken", `Bearer ${res.data}`);
+        axios.defaults.headers.common["Authorization"] = `Bearer ${res.data}`;
+      })
+      .then(() => {
+        this.props.history.push("/home");
       })
 
       .catch((error) => {
@@ -106,35 +107,7 @@ class signup extends Component {
             onSubmit={this.handleSignup}
             noValidate
           >
-            <Grid container spacing={1}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="fname"
-                  name="firstName"
-                  margin="normal"
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  type="text"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  margin="normal"
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  type="text"
-                  autoComplete="lname"
-                />
-              </Grid>
-            </Grid>
+            <Grid container spacing={1}></Grid>
             <TextField
               variant="outlined"
               margin="normal"
@@ -145,8 +118,8 @@ class signup extends Component {
               name="email"
               type="email"
               helperText={errors.email}
-              error={errors.email ? true : false}
-              value={this.state.email}
+              error={errors.error ? true : false}
+              value={this.state.error}
               onChange={this.handleChange}
               autoFocus
             />
@@ -160,7 +133,7 @@ class signup extends Component {
               type="text"
               id="handle"
               helperText={errors.handle}
-              error={errors.handle ? true : false}
+              error={errors.handel ? true : false}
               value={this.state.handle}
               onChange={this.handleChange}
             />

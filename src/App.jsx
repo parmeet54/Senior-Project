@@ -5,39 +5,39 @@ import home from "./Pages/home";
 import login from "./Pages/login";
 import signup from "./Pages/signup";
 import profile from "./Pages/profile";
-import Navbar from "./Components/Navbar";
-import jwtDecode from "jwt-decode";
+import user from "./Pages/user";
+import notification from "./Pages/notification";
 
-import axios from "axios";
+// let authenticated;
+// const token = localStorage.LoginToken;
+// let userID = "";
 
-axios.default.baseURL =
-  "https://us-central1-roommate-5923e.cloudfunctions.net/api";
-
-let authenticated;
-const token = localStorage.FBIdtoken;
-
-if (token) {
-  const decodedToken = jwtDecode(token);
-  if (decodedToken.exp * 1000 < Date.now()) {
-    window.location.href = "/login";
-    authenticated = false;
-  } else {
-    authenticated = true;
-  }
-}
+// if (token) {
+//   const decodedToken = jwtDecode(token);
+//   console.log(decodedToken.user_id);
+//   userID = decodedToken.user_id;
+//   if (decodedToken.exp * 1000 < Date.now()) {
+//     window.location.href = "/login";
+//     authenticated = false;
+//   } else {
+//     window.location.href = "/";
+//     authenticated = true;
+//   }
+// }
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <Router>
-          <Navbar />
           <div className="container">
             <Switch>
-              <Route exact path="/" component={home} />
-              <Route exact path="/login" component={login} />
+              <Route exact path="/" component={login} />
+              <Route exact path="/home" component={home} />
               <Route exact path="/signup" component={signup} />
               <Route exact path="/profile" component={profile} />
+              <Route exact path="/user/:handel" component={user} />
+              <Route exact path="/notification" component={notification} />
             </Switch>
           </div>
         </Router>

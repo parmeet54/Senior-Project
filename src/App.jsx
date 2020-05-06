@@ -5,6 +5,7 @@ import home from "./Pages/home";
 import login from "./Pages/login";
 import signup from "./Pages/signup";
 import profile from "./Pages/profile";
+import notification from "./Pages/notification"
 import Navbar from "./Components/Navbar";
 import jwtDecode from "jwt-decode";
 
@@ -39,6 +40,7 @@ class App extends Component {
               <Route exact path="/login" component={login} />
               <Route exact path="/signup" component={signup} />
               <Route exact path="/profile" component={profile} />
+              <Route exact path="/notification" component={notification} />
             </Switch>
           </div>
         </Router>

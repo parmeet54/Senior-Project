@@ -8,7 +8,6 @@ import NewPost from "../Components/NewPost";
 
 import jwtDecode from "jwt-decode";
 import PostCard from "../Components/PostCard";
-import Notifications from "../Components/Notifications";
 import HomeProfile from "../Components/HomeProfile";
 import Navbar from "../Components/Navbar";
 
@@ -49,17 +48,6 @@ class home extends Component {
       //in case of error
       .catch((err) => console.log(err));
 
-    axios.get("/user").then((res) => {
-      console.log(res.data);
-      this.setState({
-        info: res.data.info,
-        notifications: res.data.notifications,
-        userID: res.data.userID,
-      });
-      console.log(this.state.info);
-      //console.log(this.state.notifications);
-    });
-
     //token expire
     if (jwtDecode(token).exp * 1000 < Date.now()) {
       window.location.href = "/login";
@@ -77,23 +65,11 @@ class home extends Component {
       <p>Loading ...</p>
     );
 
-    let noti = this.state.notifications ? (
-      //fetch the profiles information
-      this.state.notifications.map((notifications) => (
-        <Notifications notifications={notifications} />
-      ))
-    ) : (
-      <p>Loading ...</p>
-    );
-
     return (
       //render the profiles as a grid
       <Fragment>
         <Navbar />
         <Grid container spacing={12}>
-          <Grid item sm={12} xs={12}>
-            {noti}
-          </Grid>
           <Grid item sm={8} xs={8}>
             <NewPost userID={this.state.userID} />
           </Grid>
